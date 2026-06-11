@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>التويجري للاستشارات الهندسية والسلامة · القصيم</title>
+<meta name="description" content="مكتب التويجري للاستشارات الهندسية والسلامة في بريدة، القصيم — تصميم، إشراف هندسي، أنظمة السلامة، واستشارات. تقييم ٤٫٤ على قوقل من ١٥٨ مراجعة. تواصل عبر الهاتف أو واتساب.">
+<meta property="og:title" content="التويجري للاستشارات الهندسية والسلامة">
+<meta property="og:description" content="هندسةٌ تُبنى على الأمان — تصميم وإشراف وأنظمة سلامة في القصيم.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#0e131b; --slate2:#151d28; --slate3:#1d2734; --slate4:#27323f;
+  --amber:#f5a623; --amber-l:#ffc04d; --amber-d:#cf850f; --amber-soft:rgba(245,166,35,.13);
+  --ink:#eaf0f6; --ink2:#9fb1c2; --ink3:#647688;
+  --line:rgba(255,255,255,.1); --line2:rgba(255,255,255,.05);
+  --fa-d:'IBM Plex Sans Arabic',sans-serif; --fa:'IBM Plex Sans Arabic',sans-serif; --fu:'Space Grotesk',sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1); --maxw:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--slate);color:var(--ink);font-family:var(--fa);font-weight:400;line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--amber);color:var(--slate)}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--fa-d);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.lat{font-family:var(--fu)}
+
+.logo{display:inline-flex;align-items:center;gap:11px}
+.logo .mk{width:40px;height:40px;flex:none}
+.logo .nm{font-family:var(--fa-d);font-weight:700;font-size:18px;color:var(--ink);line-height:1.12}
+.logo .nm small{display:block;font-family:var(--fu);font-size:8.5px;letter-spacing:.16em;color:var(--amber);font-weight:500;margin-top:1px}
+
+#pre{position:fixed;inset:0;z-index:10000;background:var(--slate);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .9s var(--ease),visibility .9s}
+#pre.done{opacity:0;visibility:hidden}
+#pre .mk{width:72px;height:72px;animation:spin 4s linear infinite}
+#pre b{font-family:var(--fa-d);font-size:clamp(24px,6vw,38px);color:var(--ink);font-weight:700;opacity:0;animation:plin 1s var(--ease) .3s forwards}
+#pre .pb{width:120px;height:2px;background:var(--slate3);overflow:hidden;border-radius:2px}#pre .pb i{display:block;height:100%;width:0;background:var(--amber);animation:pbar 2.2s var(--ease) .3s forwards}
+@keyframes plin{to{opacity:1;transform:none}}@keyframes pbar{to{width:100%}}@keyframes spin{to{transform:rotate(360deg)}}
+
+#prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:7000}#prog i{display:block;height:100%;width:0;background:var(--amber)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:6500;transition:.4s var(--ease)}
+.nbar{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--maxw);margin:0 auto;padding:16px 32px;transition:.4s var(--ease)}
+#nav.shrink{background:rgba(14,19,27,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px -22px #000;border-bottom:1px solid var(--line2)}
+#nav.shrink .nbar{padding-top:11px;padding-bottom:11px}
+.nav-links{display:flex;gap:4px}
+.nav-links a{font-size:14.5px;color:var(--ink2);padding:8px 14px;border-radius:8px;transition:.3s var(--ease);font-weight:500}
+.nav-links a:hover{color:var(--amber);background:var(--amber-soft)}
+.ncta{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:var(--slate);padding:11px 20px;border-radius:8px;font-weight:700;font-size:14.5px;transition:.4s var(--ease)}
+.ncta:hover{background:var(--amber-l);transform:translateY(-1px)}.ncta svg{width:16px;height:16px;fill:var(--slate)}
+.burger{display:none;width:46px;height:46px;border-radius:9px;background:var(--amber);border:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;width:20px;height:2px;background:var(--slate);border-radius:2px;transition:.4s var(--ease)}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger.x span:nth-child(1){top:23px;transform:rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){top:23px;transform:rotate(-45deg)}
+
+#mob{position:fixed;inset:0;z-index:6400;background:var(--slate2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;visibility:hidden;transition:.6s var(--ease)}
+#mob.open{opacity:1;visibility:visible}
+#mob a{font-family:var(--fa-d);font-weight:700;font-size:27px;color:var(--ink);opacity:0;transform:translateY(20px);transition:.6s var(--ease)}
+#mob.open a{opacity:1;transform:none}
+#mob.open a:nth-child(1){transition-delay:.08s}#mob.open a:nth-child(2){transition-delay:.14s}#mob.open a:nth-child(3){transition-delay:.2s}#mob.open a:nth-child(4){transition-delay:.26s}#mob.open a:nth-child(5){transition-delay:.32s}
+
+.rv{opacity:0;transform:translateY(28px);filter:blur(5px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+/* hero with radar + scan */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 32px 80px;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 68% 45%,#000,transparent 72%);-webkit-mask-image:radial-gradient(circle at 68% 45%,#000,transparent 72%)}
+.hero-scan{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(245,166,35,.07) 48%,transparent);width:50%;animation:scan 6s var(--ease) infinite}
+@keyframes scan{0%{transform:translateX(120%)}100%{transform:translateX(-220%)}}
+.hero-radar{position:absolute;top:50%;left:14%;width:min(46vw,560px);aspect-ratio:1;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.hero-radar .ring{fill:none;stroke:rgba(245,166,35,.22);stroke-width:1}
+.hero-radar .sweep{transform-origin:50% 50%;animation:spin 5s linear infinite}
+.hero-in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--fu);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);font-weight:600;border:1px solid var(--line);background:var(--slate2);padding:8px 16px;border-radius:100px}
+.hero .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(245,166,35,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,166,35,.5)}70%{box-shadow:0 0 0 8px rgba(245,166,35,0)}100%{box-shadow:0 0 0 0 rgba(245,166,35,0)}}
+.hero h1{font-size:clamp(38px,6.6vw,80px);font-weight:700;line-height:1.1;margin:24px 0 0;color:var(--ink);max-width:17ch}
+.hero h1 span{color:var(--amber)}
+.hero .sub{color:var(--ink2);font-size:clamp(16px,2.3vw,19px);max-width:46ch;margin-top:22px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-chips span{font-size:14px;color:var(--ink);background:var(--slate2);border:1px solid var(--line);padding:8px 16px;border-radius:8px;font-weight:500}
+.hero-chips span.hl{border-color:var(--amber);color:var(--amber)}
+.hero-act{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:11px;padding:15px 26px;border-radius:9px;font-weight:700;font-size:15.5px;transition:.4s var(--ease);font-family:var(--fa)}
+.btn svg{width:18px;height:18px}
+.btn-1{background:var(--amber);color:var(--slate)}.btn-1 svg{fill:var(--slate)}.btn-1:hover{background:var(--amber-l);transform:translateY(-2px);box-shadow:0 18px 38px -16px rgba(245,166,35,.5)}
+.btn-2{background:var(--slate2);border:1px solid var(--line);color:var(--ink)}.btn-2 svg{fill:var(--amber)}.btn-2:hover{border-color:var(--amber)}
+.hero-rate{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-rate .rn{font-family:var(--fu);font-weight:600;font-size:26px;color:var(--ink);line-height:1}
+.hero-rate .stars{color:var(--amber);font-size:14px;letter-spacing:1px}
+.hero-rate small{font-family:var(--fu);font-size:11px;color:var(--ink3);display:block}
+
+.strip{background:var(--amber);color:var(--slate);overflow:hidden;white-space:nowrap}
+.strip .track{display:inline-flex;animation:mq 28s linear infinite;padding:14px 0}
+.strip span{font-family:var(--fa-d);font-weight:700;font-size:16px;padding:0 24px;display:inline-flex;align-items:center;gap:24px}
+.strip span::after{content:"";width:7px;height:7px;background:var(--slate);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(50%)}}
+
+.sec{padding:clamp(70px,10vw,130px) 0}
+.shead{margin-bottom:clamp(38px,5vw,58px);max-width:680px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--fu);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);font-weight:600}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--amber)}
+.shead h2{font-size:clamp(30px,4.8vw,52px);margin:16px 0 0;color:var(--ink)}
+.shead h2 span{color:var(--amber)}
+.shead p{color:var(--ink2);font-size:16.5px;margin-top:16px;max-width:56ch}
+
+/* stats band with count-up */
+.stats{background:var(--slate2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.st{padding:48px 24px;text-align:center;border-left:1px solid var(--line2)}
+.st:first-child{border-left:0}
+.st b{font-family:var(--fu);font-weight:600;font-size:clamp(34px,5vw,54px);color:var(--amber);display:block;line-height:1}
+.st small{font-size:13.5px;color:var(--ink2);margin-top:8px;display:block}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,72px);align-items:center}
+.about-tx h2{font-size:clamp(28px,4.2vw,46px);color:var(--ink)}.about-tx h2 span{color:var(--amber)}
+.about-tx p{color:var(--ink2);font-size:16px;margin:18px 0 0}
+.about-card{background:linear-gradient(160deg,var(--slate3),var(--slate2));border:1px solid var(--line);border-radius:18px;padding:34px 30px;display:flex;flex-direction:column;gap:16px}
+.about-card .it{display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:var(--slate);border:1px solid var(--line2)}
+.about-card .it .ic{width:42px;height:42px;border-radius:10px;background:var(--amber-soft);display:grid;place-items:center;flex:none}
+.about-card .it .ic svg{width:20px;height:20px;fill:none;stroke:var(--amber);stroke-width:1.8}
+.about-card .it b{color:var(--ink);font-size:15px}.about-card .it span{color:var(--ink3);font-size:12.5px;display:block;font-family:var(--fu)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:var(--slate2);border:1px solid var(--line);border-radius:16px;padding:30px 24px;transition:.5s var(--ease);position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;top:0;right:0;width:100%;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:right;transition:.5s var(--ease)}
+.svc:hover{transform:translateY(-4px);border-color:var(--slate4)}.svc:hover::after{transform:scaleX(1)}
+.svc .ic{width:54px;height:54px;border-radius:13px;background:var(--amber-soft);display:grid;place-items:center;margin-bottom:18px}
+.svc .ic svg{width:26px;height:26px;fill:none;stroke:var(--amber);stroke-width:1.7}
+.svc .no{font-family:var(--fu);font-size:12px;color:var(--ink3);font-weight:500}
+.svc h3{font-size:19px;color:var(--ink);margin-top:2px}.svc p{color:var(--ink2);font-size:14.5px;margin-top:8px}
+
+/* process */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:st}
+.pc{padding:28px 22px;border-top:2px solid var(--line);position:relative}
+.pc::before{counter-increment:st;content:"0" counter(st);font-family:var(--fu);font-weight:600;font-size:14px;color:var(--amber);position:absolute;top:-1px;right:0;border-top:2px solid var(--amber);padding-top:10px}
+.pc h3{font-size:18px;color:var(--ink);margin-top:34px}.pc p{color:var(--ink2);font-size:14px;margin-top:6px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(34px,5vw,64px);align-items:stretch}
+.contact h2{font-size:clamp(30px,5vw,52px);color:var(--ink);margin:14px 0 0}.contact h2 span{color:var(--amber)}
+.cinfo{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+.crow{display:flex;align-items:center;gap:15px;background:var(--slate2);border:1px solid var(--line);border-radius:13px;padding:15px 18px;transition:.4s var(--ease)}
+.crow:hover{border-color:var(--amber);background:var(--slate3)}
+.crow .ic{width:46px;height:46px;border-radius:11px;background:var(--amber-soft);display:grid;place-items:center;flex:none}
+.crow .ic svg{width:20px;height:20px;fill:var(--amber)}
+.crow small{font-family:var(--fu);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);display:block}
+.crow b{font-weight:500;font-size:15px;color:var(--ink)}.crow .num{font-family:var(--fu);font-weight:600;direction:ltr;display:inline-block}
+.cact{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.cact a{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:9px;font-weight:700;font-size:15px;transition:.4s var(--ease)}
+.cact .wa{background:#25d366;color:#0a3d1c}.cact .wa svg{width:18px;height:18px;fill:#0a3d1c}.cact .wa:hover{transform:translateY(-2px)}
+.cact .call{background:var(--amber);color:var(--slate)}.cact .call svg{width:17px;height:17px;fill:var(--slate)}.cact .call:hover{transform:translateY(-2px);background:var(--amber-l)}
+.cmap{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:330px}
+.cmap iframe{width:100%;height:100%;min-height:330px;border:0;filter:grayscale(.3) invert(.92) hue-rotate(180deg) contrast(.9)}
+
+.foot{background:#0a0e14;color:var(--ink);padding:54px 0 30px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:28px}
+.foot p{color:var(--ink3);font-size:14px;max-width:42ch;margin-top:14px}
+.foot-bot{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot-bot small{font-family:var(--fu);font-size:12px;color:var(--ink3)}
+
+.wa-float{position:fixed;bottom:22px;left:22px;z-index:6000;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 16px 40px -12px rgba(37,211,102,.55);transition:.45s var(--ease);animation:wap 3s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:30px;height:30px;fill:#fff}
+@keyframes wap{0%,100%{box-shadow:0 16px 40px -12px rgba(37,211,102,.5)}50%{box-shadow:0 16px 54px -8px rgba(37,211,102,.85)}}
+
+@media(max-width:980px){
+  .nav-links{display:none}.burger{display:block}
+  .hero-radar{display:none}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .svc-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.st:nth-child(odd){border-left:0}.st:nth-child(n+3){border-top:1px solid var(--line2)}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wrap{padding:0 20px}.hero{padding:108px 20px 60px}.nbar{padding:14px 20px}
+  .svc-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}
+  .hero-act{flex-direction:column;align-items:stretch}.btn{justify-content:center}
+  .foot-bot{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="shield" viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 11-7 18-16 22-9-4-16-11-16-22V10z" fill="none" stroke="#f5a623" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 24l6 6 11-12" fill="none" stroke="#f5a623" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+
+<div id="pre"><svg class="mk" viewBox="0 0 48 48"><use href="#shield"/></svg><b>التويجري</b><div class="pb"><i></i></div></div>
+<div id="prog"><i></i></div>
+
+<nav id="nav">
+  <div class="nbar">
+    <a href="#top" class="logo"><svg class="mk" viewBox="0 0 48 48"><use href="#shield"/></svg><span class="nm">التويجري<small>ENG. &amp; SAFETY</small></span></a>
+    <div class="nav-links">
+      <a href="#about">عن المكتب</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#process">منهجيتنا</a>
+      <a href="#contact">تواصل</a>
+    </div>
+    <a href="https://wa.me/966539401033?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9" target="_blank" rel="noopener" class="ncta"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>تواصل معنا</a>
+  </div>
+</nav>
+
+<div id="mob">
+  <a href="#about">عن المكتب</a><a href="#services">خدماتنا</a><a href="#process">منهجيتنا</a><a href="#contact">تواصل</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-scan"></div>
+  <svg class="hero-radar" viewBox="0 0 200 200" aria-hidden="true">
+    <circle class="ring" cx="100" cy="100" r="92"/><circle class="ring" cx="100" cy="100" r="64"/><circle class="ring" cx="100" cy="100" r="36"/>
+    <line class="ring" x1="100" y1="8" x2="100" y2="192"/><line class="ring" x1="8" y1="100" x2="192" y2="100"/>
+    <g class="sweep"><path d="M100 100 L100 8 A92 92 0 0 1 165 35 Z" fill="url(#sg)"/></g>
+    <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="rgba(245,166,35,.35)"/><stop offset="1" stop-color="rgba(245,166,35,0)"/></linearGradient></defs>
+  </svg>
+  <div class="hero-in">
+    <span class="eyebrow"><span class="dot"></span>استشارات هندسية وسلامة · القصيم</span>
+    <h1>هندسةٌ تُبنى<br>على <span>الأمان</span></h1>
+    <p class="sub">مكتب التويجري للاستشارات الهندسية والسلامة في بريدة — نجمع بين دقّة التصميم والإشراف وأعلى معايير السلامة، لنُسلّمك مشروعًا آمنًا ومتقنًا.</p>
+    <div class="hero-chips">
+      <span>تصميم معماري</span><span>إشراف هندسي</span><span class="hl">أنظمة السلامة</span><span>استشارات</span>
+    </div>
+    <div class="hero-act">
+      <a href="tel:+966539401033" class="btn btn-1"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.24 1.02L6.6 10.8z"/></svg>اتصل بنا</a>
+      <a href="#services" class="btn btn-2"><svg viewBox="0 0 24 24"><path d="M14 5l-1.4 1.4 4.6 4.6H4v2h13.2l-4.6 4.6L14 19l7-7z"/></svg>خدماتنا</a>
+    </div>
+    <div class="hero-rate">
+      <div><div class="rn">4.4</div><div class="stars">★★★★☆</div></div>
+      <div><small>تقييم قوقل</small><small>١٥٨ مراجعة</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span>تصميم معماري</span><span>إشراف هندسي</span><span>أنظمة السلامة</span><span>استشارات</span><span>تراخيص</span><span>القصيم</span>
+    <span>تصميم معماري</span><span>إشراف هندسي</span><span>أنظمة السلامة</span><span>استشارات</span><span>تراخيص</span><span>القصيم</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="st rv"><b data-count="4.4" data-dec="1">0</b><small>تقييم قوقل</small></div>
+    <div class="st rv d1"><b data-count="158" data-suf="+">0</b><small>تقييم ومراجعة</small></div>
+    <div class="st rv d2"><b data-count="4">0</b><small>خدمات متكاملة</small></div>
+    <div class="st rv d3"><b data-count="100" data-suf="%">0</b><small>التزامٌ بالسلامة</small></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about-grid">
+    <div class="about-tx">
+      <span class="eyebrow rv">عن المكتب</span>
+      <h2 class="rv d1">خبرةٌ هندسية<br>بمعايير <span>السلامة</span></h2>
+      <p class="rv d2">مكتب التويجري للاستشارات الهندسية والسلامة مكتبٌ في القصيم يقدّم حلولًا متكاملة للمشاريع السكنية والتجارية — من التصميم والإشراف إلى أنظمة السلامة والاستشارات الهندسية.</p>
+      <p class="rv d2">ما يميّزنا هو دمج المعايير الهندسية بمتطلبات السلامة في كل مرحلة، لنمنحك مشروعًا لا يكتفي بالجمال والمتانة، بل يضع أمانك أولًا.</p>
+    </div>
+    <div class="about-card rv d1">
+      <div class="it"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14"/></svg></span><div><b>تصميم وإشراف</b><span>ARCHITECTURE &amp; SUPERVISION</span></div></div>
+      <div class="it"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V6z"/></svg></span><div><b>أنظمة السلامة</b><span>SAFETY SYSTEMS</span></div></div>
+      <div class="it"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>استشارات وتراخيص</b><span>CONSULTING &amp; PERMITS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>حلولٌ هندسية <span>آمنة</span></h2>
+      <p>نرافق مشروعك في كل مرحلة بخبرةٍ ومعايير سلامة عالية.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></div><span class="no">01</span><h3>التصميم المعماري</h3><p>تصاميم عملية تلائم احتياجك واشتراطات البناء.</p></div>
+      <div class="svc rv d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V8l8-5 8 5v12M12 3v3M9 20v-5h6v5"/></svg></div><span class="no">02</span><h3>الإشراف الهندسي</h3><p>إشرافٌ دقيق يضمن المطابقة والجودة.</p></div>
+      <div class="svc rv d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V6z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="no">03</span><h3>أنظمة السلامة</h3><p>دراسات وأنظمة سلامة معتمدة للمباني والمنشآت.</p></div>
+      <div class="svc rv d3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><span class="no">04</span><h3>الاستشارات والتراخيص</h3><p>استشاراتٌ هندسية وإنهاء الرخص والإجراءات.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">منهجيتنا</span>
+      <h2>من الفكرة إلى <span>التسليم الآمن</span></h2>
+      <p>منهجيةٌ واضحة تجعل مشروعك مطمئنًا في كل خطوة.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc rv"><h3>الدراسة والاستشارة</h3><p>نفهم احتياجك ونضع التصوّر الأنسب هندسيًا ونظاميًا.</p></div>
+      <div class="pc rv d1"><h3>التصميم والسلامة</h3><p>مخططاتٌ ودراساتُ سلامة معتمدة جاهزة للترخيص.</p></div>
+      <div class="pc rv d2"><h3>الترخيص</h3><p>إنهاء رخص البناء والإجراءات النظامية.</p></div>
+      <div class="pc rv d3"><h3>الإشراف والتسليم</h3><p>إشرافٌ ميداني حتى التسليم بالجودة والأمان.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="background:var(--slate2)">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow rv">تواصل معنا</span>
+      <h2 class="rv d1">لنبدأ مشروعك <span>بأمان</span></h2>
+      <div class="cinfo">
+        <a class="crow rv d1" href="tel:+966539401033"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.24 1.02L6.6 10.8z"/></svg></span><span><small>هاتف · واتساب</small><b class="num">053 940 1033</b></span></a>
+        <a class="crow rv d2" href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D8%AA%D9%88%D9%8A%D8%AC%D8%B1%D9%8A+%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9+%D9%88%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A9/@26.3688113,43.9323534,17z" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span><span><small>الموقع</small><b>طريق علي بن أبي طالب · بريدة · القصيم</b></span></a>
+      </div>
+      <div class="cact">
+        <a class="wa" href="https://wa.me/966539401033?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>راسلنا واتساب</a>
+        <a class="call" href="tel:+966539401033"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.24 1.02L6.6 10.8z"/></svg>اتصال مباشر</a>
+      </div>
+    </div>
+    <div class="cmap rv d1">
+      <iframe src="https://www.google.com/maps?q=26.3688113,43.9323534&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع مكتب التويجري على الخريطة"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <span class="logo"><svg class="mk" viewBox="0 0 48 48"><use href="#shield"/></svg><span class="nm">التويجري<small>ENG. &amp; SAFETY</small></span></span>
+        <p>استشارات هندسية وسلامة في القصيم — تصميم، إشراف، أنظمة سلامة، واستشارات.</p>
+      </div>
+      <a href="tel:+966539401033" class="ncta"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.03.75-.24 1.02L6.6 10.8z"/></svg>053 940 1033</a>
+    </div>
+    <div class="foot-bot">
+      <small>© 2026 مكتب التويجري للاستشارات الهندسية والسلامة · القصيم</small>
+      <small class="lat">AL-TUWAIJRI Eng. &amp; Safety</small>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/966539401033?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95zM17.9 14.6c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42z"/></svg>
+</a>
+
+<script>
+(function(){
+  var pre=document.getElementById('pre');function hide(){pre.classList.add('done')}
+  window.addEventListener('load',function(){setTimeout(hide,600)});setTimeout(hide,2600);
+  var prog=document.querySelector('#prog i'),nav=document.getElementById('nav');
+  function onScroll(){var h=document.documentElement,sc=h.scrollTop,mx=h.scrollHeight-h.clientHeight;prog.style.width=(mx>0?(sc/mx*100):0)+'%';nav.classList.toggle('shrink',sc>30);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var burger=document.querySelector('.burger'),mob=document.getElementById('mob');
+  if(!burger){burger=document.createElement('button');burger.className='burger';burger.setAttribute('aria-label','القائمة');burger.innerHTML='<span></span><span></span><span></span>';document.querySelector('.nbar').appendChild(burger);}
+  function toggle(){burger.classList.toggle('x');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':''}
+  burger.addEventListener('click',toggle);
+  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mob.classList.contains('open'))toggle()})});
+  var rvs=document.querySelectorAll('.rv');
+  function safety(){var vh=window.innerHeight;rvs.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.94){el.classList.add('in')}})}
+  // count-up
+  function countUp(el){var t=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0'),suf=el.getAttribute('data-suf')||'',st=null,dur=1400;
+    function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/dur,1);var e=1-Math.pow(1-p,3);var v=t*e;el.textContent=(dec?v.toFixed(dec):Math.round(v))+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var c=e.target.querySelector?e.target.querySelector('[data-count]'):null;if(e.target.hasAttribute&&e.target.querySelectorAll){e.target.querySelectorAll('[data-count]').forEach(countUp);}io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -7% 0px'});
+    rvs.forEach(function(el){io.observe(el)});
+  } else { rvs.forEach(function(el){el.classList.add('in');el.querySelectorAll('[data-count]').forEach(function(c){c.textContent=c.getAttribute('data-count')+(c.getAttribute('data-suf')||'')})}); }
+  window.addEventListener('load',safety);window.addEventListener('scroll',safety,{passive:true});setTimeout(safety,400);setTimeout(safety,1400);
+})();
+</script>
+</body>
+</html>
